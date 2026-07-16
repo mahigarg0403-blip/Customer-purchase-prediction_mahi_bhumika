@@ -105,6 +105,26 @@ Notably, XGBoost — typically the stronger algorithm for tabular data
 small and clean nature of the dataset (12,000 rows, 21 features) where 
 RF's bagging approach generalises better than XGBoost's aggressive boosting.
 
+
+## SHAP Interpretability (Random Forest)
+
+| Rank | Feature | Mean SHAP Value | Type |
+|---|---|---|---|
+| 1 | PageValues | 0.1296 | Original |
+| 2 | Interaction_Value | 0.1066 | Engineered  |
+| 3 | Month | 0.0680 | Original |
+| 4 | PageValues_bin | 0.0483 | Engineered  |
+| 5 | Administrative_Duration | 0.0441 | Original |
+| 6 | VisitorType | 0.0377 | Original |
+| 7 | ExitRates | 0.0320 | Original |
+| 8 | Administrative | 0.0255 | Original |
+| 9 | Session_Intensity | 0.0149 | Engineered |
+| 10 | Informational_Duration | 0.0143 | Original |
+
+3 out of top 10 features are engineered — validating feature engineering contribution.
+PageValues confirmed as dominant predictor across both EDA and SHAP analysis.
+BounceRates absent from top 10 despite -0.145 EDA correlation — ExitRates 
+correctly identified as the more informative feature of the two.
 ---
 
 ## Technologies Used
@@ -122,14 +142,6 @@ RF's bagging approach generalises better than XGBoost's aggressive boosting.
 
 ---
 
-## Team
-
-| Name | Steps |
-|---|---|
-| Mahi | 1, 3, 5, 7, 9 |
-| Bhumika | 2, 4, 6, 8, 10 |
-
----
 
 ## Status
 
@@ -141,7 +153,7 @@ RF's bagging approach generalises better than XGBoost's aggressive boosting.
 - [x] Step 6 — Random Forest
 - [x] Step 7 — XGBoost
 - [ ] Step 8 — Evaluation
-- [ ] Step 9 — SHAP
+- [x] Step 9 — SHAP
 - [ ] Step 10 — Streamlit App
 - [ ] Research Paper
 
