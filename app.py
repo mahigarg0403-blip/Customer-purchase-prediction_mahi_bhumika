@@ -185,7 +185,7 @@ if predict_btn:
     # ─── Result display ────────────────────────────────────────────────────────
     st.subheader(" Prediction Result")
 
-   if prediction == 1:
+    if prediction == 1:
         st.success(f"✅ **HIGH purchase intent detected**")
     else:
         st.error(f"❌ **LOW purchase intent detected**")
