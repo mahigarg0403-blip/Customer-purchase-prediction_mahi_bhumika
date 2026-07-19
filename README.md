@@ -19,6 +19,17 @@ users with personalised interventions.
 
 ---
 
+##Live Demo
+
+Try the app here: https://customer-purchase-predictionmahibhumika-yjeeoc2fgwpsgqgwoc6evm.streamlit.app/
+
+Enter session details (page values, exit rates, month, visitor type, etc.)
+and get a live purchase-probability prediction from our Random Forest
+model, along with a SHAP chart explaining which features drove that
+specific prediction.
+
+---------------------
+
 ## Dataset
 
 - **Source:** UCI Online Shoppers Purchasing Intention Dataset
