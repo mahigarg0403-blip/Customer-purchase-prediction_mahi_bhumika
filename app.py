@@ -185,7 +185,7 @@ if predict_btn:
     # ─── Result display ────────────────────────────────────────────────────────
     st.subheader(" Prediction Result")
 
-    if prob >= 0.60:
+if prob >= 0.60:
     st.success("✅ **High Purchase Intent**")
 elif prob >= 0.40:
     st.warning(" **Moderate Purchase Intent**")
