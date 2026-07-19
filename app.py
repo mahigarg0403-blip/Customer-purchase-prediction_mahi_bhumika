@@ -185,14 +185,14 @@ if predict_btn:
     # ─── Result display ────────────────────────────────────────────────────────
     st.subheader(" Prediction Result")
 
-if prob >= 0.60:
-    st.success("✅ **High Purchase Intent**")
-elif prob >= 0.40:
-    st.warning(" **Moderate Purchase Intent**")
-elif prob >= 0.25:
-    st.info(" **Low-Moderate Purchase Intent**")
-else:
-    st.error("❌ **Low Purchase Intent**")
+    if prob >= 0.60:
+        st.success("✅ **High Purchase Intent**")
+    elif prob >= 0.40:
+        st.warning(" **Moderate Purchase Intent**")
+    elif prob >= 0.25:
+        st.info(" **Low-Moderate Purchase Intent**")
+    else:
+        st.error("❌ **Low Purchase Intent**")
 
     st.metric(
         label="Purchase Probability",
