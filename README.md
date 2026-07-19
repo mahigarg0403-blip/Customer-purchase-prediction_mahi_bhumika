@@ -163,9 +163,9 @@ correctly identified as the more informative feature of the two.
 - [x] Step 5 — Logistic Regression
 - [x] Step 6 — Random Forest
 - [x] Step 7 — XGBoost
-- [ ] Step 8 — Evaluation
+- [x] Step 8 — Evaluation
 - [x] Step 9 — SHAP
-- [ ] Step 10 — Streamlit App
+- [x] Step 10 — Streamlit App
 - [ ] Research Paper
 
 ---
