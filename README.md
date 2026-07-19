@@ -21,7 +21,8 @@ users with personalised interventions.
 
 ##Live Demo
 
-Try the app here: https://customer-purchase-predictionmahibhumika-yjeeoc2fgwpsgqgwoc6evm.streamlit.app/
+Try the app here:
+https://customer-purchase-predictionmahibhumika-yjeeoc2fgwpsgqgwoc6evm.streamlit.app/
 
 Enter session details (page values, exit rates, month, visitor type, etc.)
 and get a live purchase-probability prediction from our Random Forest
