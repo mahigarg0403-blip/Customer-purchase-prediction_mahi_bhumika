@@ -28,7 +28,7 @@ rf_model = load_model()
 background_data = load_background()
 
 # ─── Header ────────────────────────────────────────────────────────────────────
-st.title("🛒 Customer Purchase Predictor")
+st.title(" Customer Purchase Predictor")
 st.markdown("**Predict whether an e-commerce session will result in a purchase**")
 st.markdown("*Using Random Forest — best performing model (AUC: 0.9255)*")
 st.divider()
