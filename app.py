@@ -82,11 +82,6 @@ with col2:
         min_value=0.0, max_value=400.0, value=15.0,
         help="Average page value of visited pages")
 
-    special_day = st.slider(
-        "Special Day Proximity",
-        min_value=0.0, max_value=1.0, value=0.0,
-        help="Closeness to a special day (0=not close, 1=very close)")
-
     month = st.selectbox(
         "Month",
         options=list(range(1, 13)),
@@ -98,21 +93,6 @@ with col2:
     operating_systems = st.selectbox(
         "Operating System",
         options=[1, 2, 3, 4, 5, 6, 7, 8],
-        index=1)
-
-    browser = st.selectbox(
-        "Browser",
-        options=list(range(1, 14)),
-        index=1)
-
-    region = st.selectbox(
-        "Region",
-        options=list(range(1, 10)),
-        index=0)
-
-    traffic_type = st.selectbox(
-        "Traffic Type",
-        options=list(range(1, 21)),
         index=1)
 
     visitor_type = st.selectbox(
@@ -161,6 +141,16 @@ st.divider()
 predict_btn = st.button("Predict Purchase Intent", use_container_width=True)
 
 if predict_btn:
+    # Fixed defaults for fields removed from the visible form.
+    # These are anonymized/uncertain in the source dataset (Browser, Region,
+    # TrafficType are numeric codes with no public mapping a real visitor could
+    # self-report) and are not among the top 10 SHAP features (see Step 9),
+    # so they're held constant rather than shown as inputs.
+    special_day = 0.0
+    browser = 2
+    region = 1
+    traffic_type = 2
+
     # Build raw input dict
     raw_inputs = {
         'Administrative': administrative,
