@@ -10,7 +10,7 @@ warnings.filterwarnings('ignore')
 # ─── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Customer Purchase Predictor",
-    page_icon="🛒",
+    page_icon="",
     layout="centered"
 )
 
@@ -34,7 +34,7 @@ st.markdown("*Using Random Forest — best performing model (AUC: 0.9255)*")
 st.divider()
 
 # ─── Input form ────────────────────────────────────────────────────────────────
-st.subheader("📋 Session Details")
+st.subheader("Session Details")
 st.markdown("Enter the session information below:")
 
 col1, col2 = st.columns(2)
@@ -158,7 +158,7 @@ def engineer_features(inputs):
     return d
 # ─── Predict button ────────────────────────────────────────────────────────────
 st.divider()
-predict_btn = st.button("🔮 Predict Purchase Intent", use_container_width=True)
+predict_btn = st.button("Predict Purchase Intent", use_container_width=True)
 
 if predict_btn:
     # Build raw input dict
@@ -193,7 +193,7 @@ if predict_btn:
     prediction = int(prob >= 0.5)
 
     # ─── Result display ────────────────────────────────────────────────────────
-    st.subheader("🎯 Prediction Result")
+    st.subheader(" Prediction Result")
 
     if prediction == 1:
         st.success(f"✅ **HIGH purchase intent detected**")
@@ -207,7 +207,7 @@ if predict_btn:
     )
 
     # ─── SHAP explanation ──────────────────────────────────────────────────────
-    st.subheader("🔍 Why this prediction?")
+    st.subheader("Why this prediction?")
     st.markdown("*SHAP values show which features pushed the prediction up or down*")
 
     with st.spinner("Calculating SHAP explanation..."):
